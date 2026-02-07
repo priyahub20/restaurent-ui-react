@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historical Restaurant — Royal Flavors</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="logo">Royal Flavors</div>
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#special">Special</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    </div>
+    <!-- Google Font for Stylish Logo -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</header>
+
+  <!-- HERO -->
+  <section id="home" class="hero" style="background-image:url('images/hero.jpg');">
+    <div class="overlay"></div>
+    <div class="container hero-inner">
+      <h1 class="reveal">Welcome to Royal Flavors</h1>
+      <p class="reveal delay-1">Authentic Tamil Nadu Heritage Cuisine since 1890</p>
+      <a href="#menu" class="btn reveal delay-2">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section parchment">
+    <div class="container narrow reveal">
+      <h2>About Us</h2>
+      <p>
+        Step into a timeless journey of taste, culture, and history.
+        Our restaurant preserves the royal recipes passed down through generations, creating an experience like no other.
+        Inspired by the grandeur of ancient courts, every dish we serve reflects the richness of tradition.
+        From antique interiors to authentic flavors, we ensure that your dining feels like a royal celebration.
+      </p>
+      <img src="images/about.jpg" alt="Historical Restaurant Interior" class="about-img"/>
+    </div>
+  </section>
+
+  <!-- MENU (CATEGORIES + LISTS + PRICES) -->
+  <section id="menu" class="section parchment">
+    <div class="container">
+      <h2 class="reveal">Explore Menu</h2>
+      <p class="menu-intro">Just a few of our best dishes listed below, carefully prepared to bring you authentic Tamil Nadu flavors.</p>
+
+      <div class="menu-grid">
+        <article class="menu-card reveal">
+          <img src="images/dish3.jpg" alt="Starters">
+          <h3>Starters</h3>
+          <ul class="price-list">
+            <li><span>Masala Vadai</span></li>
+            <li><span>Onion Pakora</span></li>
+            <li><span>Paneer Tikka</span></li>
+            <li><span>Chicken 65</span></li>
+          </ul>
+        </article>
+
+        <article class="menu-card reveal delay-1">
+          <img src="images/dish2.jpg" alt="Main Course">
+          <h3>Main Course</h3>
+          <ul class="price-list">
+            <li><span>Authentic Mutton Biryani</span></li>
+            <li><span>Chettinad Chicken Curry</span></li>
+            <li><span>Veg Kurma with Parotta</span></li>
+            <li><span>Madurai Fish Fry</span></li>
+          </ul>
+        </article>
+
+        <article class="menu-card reveal delay-2">
+          <img src="images/dish1.jpg" alt="Desserts">
+          <h3>Desserts</h3>
+          <ul class="price-list">
+            <li><span>Kesari</span></li>
+            <li><span>Jigarthanda (Madurai)</span></li>
+            <li><span>Rava Laddu</span></li>
+            <li><span>Payasam</span></li>
+          </ul>
+        </article>
+
+        <article class="menu-card reveal delay-3">
+          <img src="images/dish4.jpg" alt="Beverages">
+          <h3>Beverages</h3>
+          <ul class="price-list">
+            <li><span>Filter Coffee</span></li>
+            <li><span>Lemon Mint Cooler</span></li>
+            <li><span>Masala Chai</span></li>
+            <li><span>Tender Coconut</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL DISH -->
+  <section id="special" class="section special">
+    <div class="container narrow center reveal">
+      <h2>🍽️ Chef’s Signature</h2>
+      <img src="images/mutton-biryani.jpg" alt="Authentic Mutton Biryani" class="special-img"/>
+      <p>
+        Experience our <b>Authentic Mutton Biryani</b>, slow-cooked in sealed pots with aromatic basmati,
+        tender mutton, and a royal blend of spices — a recipe preserved through generations.
+      </p>
+      <a href="#contact" class="btn">Reserve a Table</a>
+    </div>
+  </section>
+
+  <!-- GALLERY WITH CAPTIONS + LIGHTBOX -->
+  <section id="gallery" class="section parchment">
+    <div class="container">
+      <h2 class="reveal">Gallery</h2>
+      <div class="gallery-grid">
+        <figure class="reveal">
+          <img src="images/gallery1.jpg" alt="Thanjavur Palace" class="lb" data-caption="Thanjavur Palace">
+          <figcaption>Thanjavur Palace</figcaption>
+        </figure>
+        <figure class="reveal delay-1">
+          <img src="images/gallery2.jpg" alt="Madurai Meenakshi Temple" class="lb" data-caption="Madurai Meenakshi Temple">
+          <figcaption>Madurai Meenakshi Temple</figcaption>
+        </figure>
+        <figure class="reveal delay-2">
+          <img src="images/gallery3.jpg" alt="Mahabalipuram Shore Temple" class="lb" data-caption="Mahabalipuram Shore Temple">
+          <figcaption>Mahabalipuram Shore Temple</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop"></div>
+      <figure class="lightbox-content">
+        <img id="lightboxImg" alt="">
+        <figcaption id="lightboxCap"></figcaption>
+        <button id="lightboxClose" class="lightbox-close" aria-label="Close">✕</button>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CONTACT + MAP -->
+  <section id="contact" class="section contact">
+    <div class="container two-col">
+      <div class="contact-form reveal">
+        <h2>Contact Us</h2>
+        <form id="contactForm" novalidate>
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="formMsg" class="form-msg" role="status"></p>
+        </form>
+        <ul class="contact-info">
+          <li>📍 Old Town Square, Chennai, India</li>
+          <li>📞 +91 98765 43210</li>
+          <li>✉️ heritage@royalflavors.in</li>
+        </ul>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">Instagram</a> ·
+          <a href="#" aria-label="Facebook">Facebook</a> ·
+          <a href="#" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+
+      <div class="map reveal delay-1" aria-label="Map">
+        <!-- Replace src with your real Google Maps embed if you want -->
+        <iframe
+          src="https://www.google.com/maps?q=Chennai%20Old%20Town%20Square&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      © 2025 Royal Flavors — Preserving History Through Food
+    </div>
+  </footer>
+
+</body>
+</html>
